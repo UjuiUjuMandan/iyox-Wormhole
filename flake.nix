@@ -66,7 +66,7 @@
         devShells.default = with pkgs;
           mkShell {
             ANDROID_SDK_ROOT = "${androidSdk}/libexec/android-sdk";
-            ANDROID_NDK_ROOT = "${androidSdk}/libexec/android-sdk/ndk-bundle";
+            ANDROID_NDK_HOME = "${androidSdk}/libexec/android-sdk/ndk-bundle";
             FLUTTER_SDK = "${pkgs.flutter}";
             JAVA_HOME = "${pkgs.jdk.home}";
             RUST_SRC_PATH = "${rustLib}/lib/rustlib/src/rust/library";
