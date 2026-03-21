@@ -25,7 +25,10 @@ jobs:
           echo "storeFile=keystore.jks" >> android/key.properties
 
       - name: Build APKs
-        run: nix develop --command just build-apk
+        run: |
+          nix develop --command echo $ANDROID_SDK_ROOT
+          nix develop --command echo $ANDROID_NDK_HOME
+          nix develop --command just build-apk
 
       - name: Build App Bundle
         run: nix develop --command just build-aab
