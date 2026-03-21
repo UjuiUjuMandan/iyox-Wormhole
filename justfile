@@ -18,6 +18,7 @@ codegen:
     flutter_rust_bridge_codegen generate
 
 build-apk: codegen
+    echo $ANDROID_SDK_ROOT
     flutter build apk --split-per-abi --release
 
 build-aab: codegen
